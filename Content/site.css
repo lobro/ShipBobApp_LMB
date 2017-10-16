@@ -1,0 +1,37 @@
+﻿body {
+    font-family: Courier New, Courier, monospace;
+}
+
+.interactive-table {
+    margin: auto;
+    border-collapse: collapse;
+    width: auto;
+}
+
+    .interactive-table th, td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .interactive-table tr:hover {
+        background-color: #f5f5f5;
+    }
+
+.right {
+    text-align: right;
+}
+
+.pageContent {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.pageFooter {
+    text-align: center;
+    font-size: 10px;
+}
+
+.mainButton {
+}
