@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+	<link rel="stylesheet" href="~/Content/site.css" type="text/css" />
+	<link rel="script" href="~/Content/site.js" type="text/js" />
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</head>
+    <body>
+		<table>
+            <tr>
+                <td><img src="~/Content/OrderUp.png"></td>
+				<td>
+                    <h1>OrderUp!</h1>
+					<p>Finally, a <em><u>no-nonsense</u></em> web application that organizes your users and their orders.</p>
+				</td>
+			</tr>
+		</table>
+        <hr />
+		
+    	<div class="pageContent">
+    	    @RenderBody()
+        </div>
+
+		<hr />
+		<p class="pageFooter">Created by: <a href="~/Content/LauraMBrennan_Resume.pdf">Laura M. Brennan</a><br />
+        e: lmebrennan@gmail.com | ph: 414.788.0443</p>
+		<p class="pageFooter">This web application was created for consideration for a position at <a href="http://www.shipbob.com">ShipBob</a>.</p>
+    </body>
+</html>

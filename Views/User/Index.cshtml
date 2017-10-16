@@ -1,0 +1,51 @@
+﻿@model ShipBobApp_LMB.Models.UserModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+</head>
+<body>
+        <div ng-app="userList" ng-controller="userController">
+            <h3>Users</h3>
+            <table class="interactive-table">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th></th>
+                        <th><button ng-click="AddNewUser()">Add New User</button></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="u in users">
+                        <td>{{u.FirstName}}</td>
+                        <td>{{u.LastName}}</td>
+                        <td><button ng-click="ViewUserOrders(u.Id)">View Orders</button></td>
+                        <td><button ng-click="EditUser(u.Id)">Edit User</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+		<script>
+			var app = angular.module("userList",[]);
+app.controller("userController",function($scope) {
+    $scope.users = [{FirstName: "Laura", LastName: "Brennan", Id:1},
+                    {FirstName: "Cari", LastName: "Brennan", Id:2}];
+
+    $scope.ViewUserOrders=function(Id){
+        alert(Id);
+        window.location="#/Order?Id="+Id;
+    }
+
+    $scope.EditUser=function(Id){
+        alert(Id);
+        $location.path('/AddEditUser.cshtml');
+        window.location='#/User/AddEditUser'
+    }
+});
+			</script>
+    </body>	
+</html>
+

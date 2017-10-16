@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+	
+	<body>
+		<div ng-app="home" ng-controller="homeController">
+<!--			<h3>Users</h3>-->
+            <button class="mainButton" ng-click="redirect()">View Users</button>
+		</div>
+
+		<script>
+            var home = angular.module("home",[]);
+        	home.controller("homeController", function($scope,$location) {
+                $scope.redirect =function(){
+			        var url = "http://" + $location.host + "/User";
+			        $location.url(url);
+			    }
+        	});         
+        </script>
+	</body>
+</html>
